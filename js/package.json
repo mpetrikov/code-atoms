@@ -1,35 +1,35 @@
 {
-  "name": "code-atoms",
-  "version": "0.1.0",
-  "type": "module",
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "types": "./dist/index.d.ts"
+    "name": "code-atoms",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "./dist/index.cjs.js",
+    "module": "./dist/index.esm.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.esm.js",
+            "require": "./dist/index.cjs.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "directories": {
+        "example": "examples"
+    },
+    "scripts": {
+        "test": "tsx ./examples/parse-single-file.ts"
+    },
+    "keywords": [],
+    "author": "Max Petrikov",
+    "license": "MIT",
+    "description": "",
+    "dependencies": {
+        "@babel/parser": "^7.29.0",
+        "@babel/traverse": "^7.29.0"
+    },
+    "devDependencies": {
+        "@types/babel__traverse": "^7.28.0",
+        "@types/node": "^25.2.0",
+        "prettier": "^3.8.1",
+        "tsx": "^4.21.0"
     }
-  },
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "tsx ./examples/parse-single-file.ts"
-  },
-  "keywords": [],
-  "author": "Max Petrikov",
-  "license": "MIT",
-  "description": "",
-  "dependencies": {
-    "@babel/parser": "^7.29.0",
-    "@babel/traverse": "^7.29.0"
-  },
-  "devDependencies": {
-    "@types/babel__traverse": "^7.28.0",
-    "@types/node": "^25.2.0",
-    "prettier": "^3.8.1",
-    "tsx": "^4.21.0"
-  }
 }

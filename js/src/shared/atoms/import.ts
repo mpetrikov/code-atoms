@@ -1,8 +1,8 @@
 import type { BaseAtom } from "./base";
 
 export interface ImportAtom extends BaseAtom {
-  kind: "import";
+    kind: "import";
 
-  source: string;
-  specifiers: string[];
+    source: string;
+    specifiers: string[];
 }

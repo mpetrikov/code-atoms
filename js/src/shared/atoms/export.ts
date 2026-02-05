@@ -1,8 +1,8 @@
 import type { BaseAtom } from "./base";
 
 export interface ExportAtom extends BaseAtom {
-  kind: "export";
+    kind: "export";
 
-  name: string;
-  exportKind: "named" | "default" | "namespace";
+    name: string;
+    exportKind: "named" | "default" | "namespace";
 }

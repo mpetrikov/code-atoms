@@ -4,15 +4,29 @@ import { parseWithBabel } from "../src/parser/babelParser";
 const ast = parseWithBabel({
   code: `
     import { foo } from "./foo";
+    import bar from "./bar";
 
-    export const bar = () => {
+    export const a = () => {
       foo();
     };
+
+    export const c = () => {
+      bar();
+    }
+
+    export const b = () => {
+      foo();
+      a();
+      c();
+    };
+
+    export default b;
   `,
   filePath: "example.js",
 });
 
-// console.log(ast);
-// console.log(ast.type);
+// console.log("ast", ast);
+// console.log("ast.type", ast.type);
 
-collectAtoms(ast);
+const atoms = collectAtoms(ast, "file.ts");
+console.log(atoms);

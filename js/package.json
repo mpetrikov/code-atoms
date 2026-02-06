@@ -2,21 +2,22 @@
     "name": "code-atoms",
     "version": "0.1.0",
     "type": "module",
-    "main": "./dist/index.cjs.js",
-    "module": "./dist/index.esm.js",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.esm.js",
-            "require": "./dist/index.cjs.js",
-            "types": "./dist/index.d.ts"
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
         }
     },
     "directories": {
         "example": "examples"
     },
     "scripts": {
-        "test": "tsx ./examples/parse-single-file.ts"
+        "test": "tsx ./examples/parse-single-file.ts",
+        "build": "tsup",
+        "dev": "tsup --watch"
     },
     "keywords": [],
     "author": "Max Petrikov",
@@ -30,6 +31,8 @@
         "@types/babel__traverse": "^7.28.0",
         "@types/node": "^25.2.0",
         "prettier": "^3.8.1",
-        "tsx": "^4.21.0"
+        "tsup": "^8.5.1",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.3"
     }
 }

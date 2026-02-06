@@ -3,15 +3,15 @@ import type { File } from "@babel/types";
 
 export interface ParseOptions {
     code: string;
-    filePath?: string;
+    sourceId: string;
 }
 
 export const parseWithBabel = (parseOptions: ParseOptions): File => {
-    const { code, filePath } = parseOptions;
+    const { code, sourceId } = parseOptions;
 
     return parse(code, {
         sourceType: "module",
-        sourceFilename: filePath,
+        sourceFilename: sourceId,
 
         plugins: [
             // core JS

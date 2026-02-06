@@ -22,7 +22,7 @@ const ast = parseWithBabel({
 
       export default b;
     `,
-    filePath: "example.js",
+    sourceId: "example.js",
 });
 
 // console.log("ast", ast);
